@@ -9,6 +9,15 @@ phrase = input("input cipher: ")
 phrase = phrase.upper()
 
 encrypt = []
+"""
+This is the implementation of the decryption function for Caesar Cipher. 
+With the help of modular arithmetic, we are able to wrap around the ascii letters
+so we can execute this correctly. 
+
+Im going to take input and make it uppercase, thus its ascii range will be 65-90. 
+This will make programming this much easier.
+"""
+
 #ascii values must stay between 65 - 90
 #handles the 25 encryptions 
 for y in range(26):
@@ -24,6 +33,7 @@ for y in range(26):
             val.append(x)
     encrypt.append((("rot "+ str(y)),''.join(val)))
     
+
 ## going to make this more instant by adding frequency analysis and tell
 ## which rotation is used
 frequency = []
