@@ -24,11 +24,11 @@ for y in range(26):
     val = []
     #x the amount to shift numbers in string
     for x in phrase:
-        if ord(x) > 90 or ord(x) < 65:
+        if ord(x) > 90 or ord(x) < 65: ## this is checking to see if its a non character
             val.append(x)
-        elif ord(x) == 32:
+        elif ord(x) == 32: ## if its white space
             val.append(" ")
-        else: 
+        else: ## the SAUCE
             x = chr(((ord(x) + 65) + y) % 26 + 65)
             val.append(x)
     encrypt.append((("rot "+ str(y)),''.join(val)))
